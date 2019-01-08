@@ -106,8 +106,7 @@ Here are commands used to create a two-node cluster for studying. I keep these h
 ```
 gcloud config set compute/zone us-central1-a
 gcloud config set compute/region us-central1
-gcloud container clusters create my-cluster \
-     --image-type=ubuntu --num-nodes=2
+gcloud container clusters create my-cluster --zone=europe-west2-a --image-type=ubuntu --num-nodes=2 --enable-network-policy
 ```
 The result:
 ```
