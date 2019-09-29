@@ -121,9 +121,15 @@ gke-my-cluster-default-pool-5f731fab-llrb   Ready     <none>    41s       1.10.7
 ```
 ## Istio setup on GKE
 ```
-gcloud container clusters create istio-tutorial \
+gcloud container clusters create my-cluster \
     --machine-type=n1-standard-2 \
     --num-nodes=4
+gcloud container clusters get-credentials istio-tutorial
+kubectl create clusterrolebinding cluster-admin-binding \
+  --clusterrole=cluster-admin \
+  --user="$(gcloud config get-value core/account)"
+
+
 ```
 
 ## Setting kubectl Credentials
