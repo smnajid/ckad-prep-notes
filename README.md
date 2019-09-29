@@ -119,6 +119,13 @@ NAME                                        STATUS    ROLES     AGE       VERSIO
 gke-my-cluster-default-pool-5f731fab-9d6n   Ready     <none>    44s       1.10.7-gke.6
 gke-my-cluster-default-pool-5f731fab-llrb   Ready     <none>    41s       1.10.7-gke.6
 ```
+## Istio setup on GKE
+```
+gcloud container clusters create istio-tutorial \
+    --machine-type=n1-standard-2 \
+    --num-nodes=4
+```
+
 ## Setting kubectl Credentials
 If using the cloud shell, you'll sometimes need to authorize kubectl to connect to your cluster instance.
 ```
